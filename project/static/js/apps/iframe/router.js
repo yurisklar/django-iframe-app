@@ -25,7 +25,7 @@
             app.imagesView.render();
         },
         set_loading_images: function(){
-            var default_array = []
+            var default_array = [];
             for (var i = 0; i < 5; i++){
                 default_array.push(window.loading_image_obj);
             }
