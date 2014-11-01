@@ -6,9 +6,23 @@
 </head>
 <body>
 
+
+<script type="text/html" id="imageTemplate">
+    <div class="loaded-image">
+         <img src="<%= image %>" />
+    </div>
+</script>
+
+
+
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+<script type="text/javascript" src="{% static "js/apps/iframe/app.js" %}"></script>
+<script type="text/javascript" src="{% static "js/apps/iframe/models.js" %}"></script>
+<script type="text/javascript" src="{% static "js/apps/iframe/collections.js" %}"></script>
+<script type="text/javascript" src="{% static "js/apps/iframe/views.js" %}"></script>
+<script type="text/javascript" src="{% static "js/apps/iframe/router.js" %}"></script>
 
 </body>
 </html>
