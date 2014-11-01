@@ -17,7 +17,7 @@ class ImagesView(View, ContextMixin):
     def get_context_data(self, **kwargs):
         images = Image.objects.filter(tag__name=kwargs["tag"])
         if not images:
-            images = Image.objects.order_by('?')[0:1]
+            images = Image.objects.order_by('?')[0:5]
         return images
 
     def render_to_json_response(self, context):
