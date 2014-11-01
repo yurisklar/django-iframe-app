@@ -26,7 +26,7 @@
         },
         set_loading_images: function(){
             var default_array = [];
-            for (var i = 0; i < 5; i++){
+            for (var i = 0; i < window.loading_images_count; i++){
                 default_array.push(window.loading_image_obj);
             }
             app.imagesView.collection.reset(default_array);

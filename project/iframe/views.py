@@ -6,8 +6,14 @@ from django.views.generic.base import ContextMixin
 
 from iframe.models import Image
 
+
 class IframeView(TemplateView):
     template_name = "iframe.html"
+
+    def get_context_data(self, **kwargs):
+        return {
+            "loading_images_count": Image.DEFAULT_LOAD_IMAGES_NUMER
+        }
 
 
 class ImagesView(View, ContextMixin):
@@ -17,7 +23,8 @@ class ImagesView(View, ContextMixin):
     def get_context_data(self, **kwargs):
         images = Image.objects.filter(tag__name=kwargs["tag"])
         if not images:
-            images = Image.objects.order_by('?')[0:5]
+            images = Image.objects.order_by('?')[
+                0: Image.DEFAULT_LOAD_IMAGES_NUMER]
         return images
 
     def render_to_json_response(self, context):

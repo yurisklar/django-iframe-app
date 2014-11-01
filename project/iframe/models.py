@@ -9,6 +9,8 @@ class ImageTag(models.Model):
 
 
 class Image(models.Model):
+    DEFAULT_LOAD_IMAGES_NUMER = 3
+
     tag = models.ForeignKey(ImageTag)
     picture = models.ImageField(upload_to='images')
 
