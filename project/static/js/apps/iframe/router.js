@@ -8,6 +8,17 @@
             // after new tag is set using location.hash
             console.log("set tag");
             console.log(tag_name);
+
+            // first show loading
+
+            app.imagesView.collection.url = '/images/' + tag_name;
+            app.imagesView.collection.fetch({
+                url: '/images/' + tag_name,
+                success: function (collection) {
+                    app.imagesView.collection = collection;
+                    app.imagesView.render();
+                }
+            });
         },
         initialize: function(){
             console.log("initialize");

@@ -9,8 +9,9 @@
     });
     views.ImagesView = Backbone.View.extend({
         tagName: 'ul',
-        el: 'body',
+        el: '#main',
         render: function () {
+            this.$el.empty();
             this.collection.each(function (image) {
                 var imageView = new views.ImageView({ model: image });
                 this.$el.append(imageView.render().el);
