@@ -16,13 +16,7 @@
 <div id="main">
 </div>
 
-<script type="text/javascript">
-    window.loading_image_obj = {
-        "image": "{% static "images/default_loader.gif" %}"
-    };
-    window.loading_images_count = {{ loading_images_count }};
-</script>
-
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/easyXDM/2.4.17.1/easyXDM.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
@@ -31,6 +25,21 @@
 <script type="text/javascript" src="{% static "js/apps/iframe/collections.js" %}"></script>
 <script type="text/javascript" src="{% static "js/apps/iframe/views.js" %}"></script>
 <script type="text/javascript" src="{% static "js/apps/iframe/router.js" %}"></script>
+
+<script type="text/javascript">
+    window.loading_image_obj = {
+        "image": "{% static "images/default_loader.gif" %}"
+    };
+    window.loading_images_count = {{ loading_images_count }};
+    $(function () {
+        var socket = new easyXDM.Socket({
+            onMessage: function (message, origin) {
+                console.log("new messsage");
+                console.log(message);
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
