@@ -27,15 +27,14 @@
 
 <script type='text/javascript'>//<![CDATA[
 $(window).load(function(){
-var socket = new easyXDM.Socket({
+socket = new easyXDM.Socket({
     remote: "http://localhost:9000/iframe/#tag/starting",
     container: "iframe_container",
     props: {
-        width: 800,
-        height:300,
+        width: 200,
+        height:400,
         style: {border: "1px solid red"}
     }
-
 });
 
 update_iframe = function(tag){
@@ -49,32 +48,25 @@ update_iframe = function(tag){
 
 </head>
 <body>
-<div id="iframe_container">
+  <div id="iframe_container">
 </div>
 
 <div class="keywords">
-
     <a style="font-size:22px;color:#339966"
        onclick = "update_iframe('space');return false;"
        href="#">space</a>
-
     <a style="font-size:25px;color:#FF00FF"
        onclick = "update_iframe('food');return false;"
        href="#">food</a>
-
-
     <a style="font-size:28px;color:#993300"
        onclick = "update_iframe('electronics');return false;"
        href="#">electronics</a>
-
     <a style="font-size:20px;color:#CC0033"
        onclick = "update_iframe('y1Lnm370');return false;"
        href="">random</a>
-
-    <a style="font-size:20px;color:#CC0033"
+    <a style="font-size:30px;color:#CC3333"
        onclick = "update_iframe('starting');return false;"
        href="">starting</a>
-
 </div>
 
 
