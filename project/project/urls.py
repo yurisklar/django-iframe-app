@@ -3,10 +3,14 @@ from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.conf.urls.static import static
 
-from iframe.views import IframeView, ImagesView
+from iframe.views import IframeView, ImagesView, TestView
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
+)
+
+urlpatterns += patterns('',
+    url(r'^test/', TestView.as_view()),
 )
 
 urlpatterns += patterns('',

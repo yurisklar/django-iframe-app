@@ -9,6 +9,9 @@ from django.utils.decorators import method_decorator
 from iframe.models import Image
 
 
+class TestView(TemplateView):
+    template_name = "test.html"
+
 class IframeView(TemplateView):
     template_name = "iframe.html"
 
