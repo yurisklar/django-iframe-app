@@ -11,8 +11,15 @@
 	$(function(){
         var imagesCollection = new app.collections.Images({});
         app.imagesView = new app.views.ImagesView({collection: imagesCollection});
-		new app.router.ApiRouter();
+		var router = new app.router.ApiRouter();
         Backbone.history.start({root: "/iframe/"});
+
+        var socket = new easyXDM.Socket({
+            onMessage: function (message, origin) {
+                router.navigate(message, {trigger: true, replace: true});
+            }
+        });
+
     });
 })();
 

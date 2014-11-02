@@ -31,14 +31,6 @@
         "image": "{% static "images/default_loader.gif" %}"
     };
     window.loading_images_count = {{ loading_images_count }};
-    $(function () {
-        var socket = new easyXDM.Socket({
-            onMessage: function (message, origin) {
-                console.log("new messsage");
-                console.log(message);
-            }
-        });
-    });
 </script>
 
 </body>
