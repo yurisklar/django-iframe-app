@@ -13,7 +13,7 @@ It uses live application hosted on pythonanywhere: [http://yurisklar.pythonanywh
 
 ###Installation
 
-1. Make sure Python, virtualenvwrapper, and Git are installed
+1. Make sure Python (2.7), virtualenvwrapper, and Git are installed
 
 2. Install and setup django-iframe-app:
 
