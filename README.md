@@ -7,7 +7,8 @@ It's an application which can do:
 
 ##Demo
 
-Please go to [JSFiddle](http://jsfiddle.net/y1Lnm370/62/)
+Please go to [JSFiddle](http://jsfiddle.net/y1Lnm370/62/).
+It uses live application hosted on pythonanywhere: [http://yurisklar.pythonanywhere.com/iframe/#tag/starting](http://yurisklar.pythonanywhere.com/iframe/#tag/starting)
 
 
 ###Installation
