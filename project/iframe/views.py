@@ -3,6 +3,8 @@ import json
 from django.http import HttpResponse
 from django.views.generic import TemplateView, View
 from django.views.generic.base import ContextMixin
+from django.views.decorators.clickjacking import xframe_options_exempt
+from django.utils.decorators import method_decorator
 
 from iframe.models import Image
 
@@ -14,6 +16,11 @@ class IframeView(TemplateView):
         return {
             "loading_images_count": Image.DEFAULT_LOAD_IMAGES_NUMER
         }
+
+    @method_decorator(xframe_options_exempt)
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        return self.render_to_response(context)
 
 
 class ImagesView(View, ContextMixin):
