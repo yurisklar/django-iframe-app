@@ -36,3 +36,8 @@ Please go to [JSFiddle](http://jsfiddle.net/y1Lnm370/62/)
 ###Local environment
 
 To see how it works in local environment you need to use Django admin to populate images, also you'd need to run 2 servers on different ports (say 9000 and 9009) and open [http://localhost:9009/test/](http://localhost:9009/test/)
+
+###TODO
+
+  * add tests
+  * add documentation
