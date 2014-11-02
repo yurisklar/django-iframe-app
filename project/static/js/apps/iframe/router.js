@@ -17,8 +17,7 @@
             });
         },
         initialize: function(){
-            // first show loading images
-            return this.set_loading_images();
+            this.set_tag("starting");
         },
         set_images_collection: function(collection){
             app.imagesView.collection = collection;
